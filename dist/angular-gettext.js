@@ -118,8 +118,8 @@ angular.module('gettext').factory('gettextCatalog', ["gettextPlurals", "$http", 
         loadRemote: function (url) {
             return $http({
                 method: 'GET',
-                url: url,
-                cache: catalog.cache
+                url: url/*,
+                cache: catalog.cache*/
             }).then(function (response) {
                 var data = response.data;
                 for (var lang in data) {
